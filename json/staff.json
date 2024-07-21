@@ -1,0 +1,11 @@
+[
+    {"department": "Administration", "members": [
+      {"images":"true","name": "Zelriano36", "grade": "Fondateur de Randerium"},
+      {"images":"true","name": "Zelriano36", "grade": "Administrateur"},
+      {"images":"false","name": "Owernite", "grade": "Administrateur"},
+      {"images":"false","name": "Noahvocah", "grade": "Administrateur"}
+    ]}, 
+    {"department": "Responsable", "members": [
+        {"images":"false","name": "Aucun", "grade": "Staff"}
+      ]}
+  ]

@@ -1,0 +1,47 @@
+@font-face {
+    font-family: MyFont;
+    src: url(./font/orbitron-black.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../css/images/index/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: MyFont, sans-serif;
+}
+
+
+.jointext, .join_title {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: x-large;
+}
+section.info {
+    
+
+    background-color: #0f61b9;
+    padding: 15px 25px;
+    border-radius: 18px;
+
+}
+.join_button {
+    background-color: #007bff;
+    padding: 10px 25px;
+    border-radius: 18px;
+    font-size: x-large;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: MyFont, sans-serif;
+}
+
+.join_button:hover {
+    background-color: rgb(50, 100, 200);
+    color: rgba(255, 255, 255, 0.575);
+}

@@ -1,0 +1,89 @@
+@font-face {
+    font-family: MyFont;
+    src: url(./font/orbitron-black.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/index/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: MyFont, sans-serif;
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 992px) {
+    
+    .staffbox {
+        margin-top: 200px;
+        width: 700px;
+        color: rgb(255, 255, 255);
+        background-color: #007bff;
+        border-radius: 25px;
+        padding: 1px;
+    }
+}
+@media screen and (min-width: 412px) and (max-width: 991px){
+    .staffbox {
+        margin-top: 100px;
+        width: 380px;
+        color: rgb(255, 255, 255);
+        background-color: #007bff;
+        border-radius: 25px;
+        padding: 1px;
+    }
+    .imgdiv {
+        width: 64px;
+        height: 64px;
+    }
+}
+.staff_button {
+    background-color: #007bff;
+    padding: 10px 25px;
+    border-radius: 18px;
+    font-size: medium;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-family: MyFont;
+}
+
+.staff_button:hover {
+    background-color: rgb(50, 100, 200);
+    color: rgba(255, 255, 255, 0.575);
+}
+#staff-container {
+    margin-top: 20px;
+}
+
+.department {
+    margin-bottom: 20px;
+}
+
+.department h2 {
+    color: #14528f;
+    border-bottom: 2px solid #14528f;
+    padding-bottom: 5px;
+}
+
+.staff-member {
+    background-color: #007bff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border-color: #14528f;
+    border: 10px;
+}
+
+.staff-member .name {
+    font-weight: bold;
+}
+
+.staff-member .grade {
+    color: #999;
+}

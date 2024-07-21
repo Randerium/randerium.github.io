@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randerium Studios | Accueil</title>
+    <link rel="shortcut icon" href="./images/navbar/Randerium_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/index.style.css">
+</head>
+<body>
+    <script>
+// Exemple pour exécuter du code après chargement du contenu
+fetch('./backhtml/nav.html')
+    .then(response => response.text())
+    .then(html => {
+        const container = document.getElementById('nav-placeholder');
+        container.innerHTML = html;
+
+        // Ajouter du code spécifique pour le contenu importé ici
+        setupButtonListeners(); // Exemple de fonction pour ajouter des gestionnaires d'événements
+    })
+    .catch(error => console.error('Erreur lors de l\'importation de la page HTML:', error));
+
+// Exemple de fonction pour ajouter des gestionnaires d'événements
+function setupButtonListeners() {
+    const button = document.querySelector('.nav-toggle');
+    if (button) {
+        button.addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+
+        });
+    }
+}
+    </script>
+    <div id="nav-placeholder"></div>
+    
+    
+    <main class="content">
+       
+        <section class="info">
+            <h1 class="join_title">Commencez Votre Aventure !</h1>
+            <p class="jointext">REJOIGNEZ Randerium</p>
+            <a href="#join">
+                <button class="join_button">Rejoindre</button>
+            </a>
+        </section>
+    </main>
+    
+     <script>
+        fetch('./backhtml/footer.html')
+            .then(response => response.text())
+            .then(html => {
+                // Sélectionner la div existante
+                const containers = document.getElementById('footer-placeholder');
+                // Insérer le contenu HTML dans la div
+                containers.innerHTML = html;
+            })
+            .catch(error => console.error('Erreur lors de l\'importation de la page HTML:', error));
+    </script>
+     <div id="footer-placeholder"></div>
+    
+</body>
+</html>

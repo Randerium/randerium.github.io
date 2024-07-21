@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randerium Studios | Accueil</title>
+    <link rel="shortcut icon" href="./images/navbar/Randerium_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../backhtml/nav.css">
+</head>
+<body>
+    <header class="nav">
+        <img src="../images/Randerium_logo.png" alt="Logo Du Site">
+        <nav class="nav-links" role="navigation">
+            <a href="./index.html">Accueil</a>
+            <a href="./nos-jeux.html">Nos jeux</a>
+            <a href="./projet.html">Nos Projets</a>
+            <a href="./video.html">Nos Trailer</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            navToggle.addEventListener('click', function() {
+                console.log('test')
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

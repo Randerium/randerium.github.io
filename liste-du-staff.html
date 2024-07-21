@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randerium Studios | Liste du Staff</title>
+    <link rel="shortcut icon" href="./images/navbar/Randerium_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/staff.css">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <div id="nav-placeholder"></div>
+    <script>
+        // Exemple pour exécuter du code après chargement du contenu
+        fetch('./backhtml/nav.html')
+            .then(response => response.text())
+            .then(html => {
+                const container = document.getElementById('nav-placeholder');
+                container.innerHTML = html;
+        
+                // Ajouter du code spécifique pour le contenu importé ici
+                setupButtonListeners(); // Exemple de fonction pour ajouter des gestionnaires d'événements
+            })
+            .catch(error => console.error('Erreur lors de l\'importation de la page HTML:', error));
+        
+        // Exemple de fonction pour ajouter des gestionnaires d'événements
+        function setupButtonListeners() {
+            const button = document.querySelector('.nav-toggle');
+            if (button) {
+                button.addEventListener('click', () => {
+                    const navLinks = document.querySelector('.nav-links');
+                    navLinks.classList.toggle('active');
+        
+                });
+            }
+        }
+            </script>
+    <main class="content">
+        <section class="staff">
+            <div class="staffbox">
+            <h1>Liste du staff</h1>
+            <p>Voici la liste détaillée du staff de Randerium, comptant les premières et secondes affiliations (précisées en italique).
+            Nous mettons à jour cette liste tous les premiers du mois.<br>
+            <i>Attention : les membres en période de test n'y sont pas inscrits.</i></p>    
+            </div>
+            
+            <div id="staff-container"></div>
+    <script src="./script/script-staff.js"></script>
+            <a href="#join">
+                <button class="staff_button">Rejoindre le staff</button>
+            </a>
+        </section>
+    </main>
+    <script>
+        fetch('./backhtml/footer.html')
+            .then(response => response.text())
+            .then(html => {
+                // Sélectionner la div existante
+                const containers = document.getElementById('footer-placeholder');
+                // Insérer le contenu HTML dans la div
+                containers.innerHTML = html;
+            })
+            .catch(error => console.error('Erreur lors de l\'importation de la page HTML:', error));
+    </script>
+     <div id="footer-placeholder"></div>
+</body>
+</html>

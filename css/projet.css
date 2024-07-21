@@ -1,0 +1,88 @@
+@font-face {
+    font-family: MyFont;
+    src: url(./font/orbitron-black.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/index/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: MyFont, sans-serif;
+}
+.projet_element {
+    background-color: #007bff;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+
+}
+.projet_title, .projet_text {
+    color: white;
+    font-size: xx-large;
+}
+.projet_element img {
+        border-radius: 40px;
+        width: 800px;
+}
+@media screen and (min-width: 992px) {
+    .projet_element {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        text-align: center;
+        background-color: #007bff;
+        border-radius: 100px;
+        padding-top: 4px;
+        padding-right: 100px;
+        padding-left: 100px;
+        padding-bottom: 100px;
+        padding-top: 10px;
+    
+    }
+    .projet_title, .projet_text {
+        translate:(10px 0px) ;
+        color: white;
+        font-size: xx-large;
+    }
+    
+}
+@media screen and (min-width: 412px) and (max-width: 991px){
+    .projet_element {
+        background-color: #007bff;
+        border-radius: 10px;
+        padding-top: 5px;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-bottom: 10px;
+    
+    }
+    .projet_title, .projet_text {
+        color: white;
+        font-size: xx-large;
+    }
+    .projet_element img {
+        border-radius: 40px;
+        width: 300px;
+}
+}
+.projet_button {
+    background-color: #0f61b9;
+    padding: 10px 25px;
+    border-radius: 18px;
+    font-size: x-large;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: MyFont, sans-serif;
+}
+
+.projet_button:hover {
+    background-color: rgb(50, 100, 200);
+    color: rgba(255, 255, 255, 0.575);
+}
